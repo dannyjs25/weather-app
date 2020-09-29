@@ -1,0 +1,78 @@
+.title {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: x-large;
+}
+
+.master-row {
+    height: 100%;
+}
+
+.div1 {
+    background-color: black;
+}
+
+.div2 {
+    background-color: pink;
+}
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+}
+#wicon{
+    height: 40px;
+    width: 40px;
+    display: block-inline;
+}
+.current-city{
+    display: block-inline;
+}
+.good-uv{
+    background-color: green;
+}
+.moderate-uv{
+    background-color: yellow;
+}
+.severe-uv{
+    background-color: red;
+}
+.disappear{
+    display : none;
+}
+.show{
+    display: show;
+}
+.forecast{
+    background-color: #007BFF !important;
+    color: white;
+}
+.card-text{
+    padding-bottom: 2px !important;
+}
+#forecastcard{
+    display: inline-block;
+    margin: 2px;
+}
+#forecast{
+    display: inline-block;
+}
