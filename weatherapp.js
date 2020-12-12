@@ -17,7 +17,7 @@
 function searchWeather(city) {
 
     // call api 
-    var apiKey = "2644d35b2adfcc8bc5136b634f1b23fb";
+    var apiKey = "56b807395ba07bbf1081346679d3767f";
     var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=";
 
 
@@ -58,12 +58,12 @@ function searchWeather(city) {
 
 
 }
-// checks if it exists in history - if not push to llocal storage 
+// checks if it exists in history - if not push to local storage 
 
 
 // call get uv index
 function getUVIndex(lat, lon) {
-    var apiKey = "appid=2644d35b2adfcc8bc5136b634f1b23fb";
+    var apiKey = "appid=56b807395ba07bbf1081346679d3767f";
     var weatherURL = "https://api.openweathermap.org/data/2.5/uvi?";
     var lat = "&lat=" + lat;
     var lon = "&lon=" + lon;
@@ -93,7 +93,7 @@ function getUVIndex(lat, lon) {
 }
 
 function getExpectedForecast(lat, lon) {
-    var apiKey = "&appid=2644d35b2adfcc8bc5136b634f1b23fb";
+    var apiKey = "&appid=56b807395ba07bbf1081346679d3767f";
     var weatherURL = "https://api.openweathermap.org/data/2.5/onecall?";
     var lat = "lat=" + lat;
     var lon = "&lon=" + lon;
@@ -144,27 +144,27 @@ function addToHistory(cityname) {
     if (searchHistory.length > 0) {
         
             // $(".search-history").append("<li class = list-group-item searched-city>" + searchHistory[cities] + "</li>")
-            if (searchHistory.indexOf(cityname) >= 0) {
+            if (searchHistory.indexOf(cityName) >= 0) {
                 console.log("city in list")
                 return
             } else {
                 console.log("Adding to list")
                 // $(".search-history").append("<li class = list-group-item searched-city>" + searchHistory[cities] + "</li>")
 
-                searchHistory.push(cityname)
+                searchHistory.push(cityName)
 
                 localStorage.setItem("history", JSON.stringify(searchHistory));
 
-                $(".search-history").append("<li class = list-group-item searched-city>" + cityname + "</li>")
+                $(".search-history").append("<li class = list-group-item searched-city>" + cityName + "</li>")
 
     
         }
     } else {
-        searchHistory.push(cityname)
+        searchHistory.push(cityName)
 
         localStorage.setItem("history", JSON.stringify(searchHistory));
 
-        $(".search-history").append("<li class = list-group-item searched-city>" + cityname + "</li>")
+        $(".search-history").append("<li class = list-group-item searched-city>" + cityName + "</li>")
     }
 
 }
@@ -173,8 +173,8 @@ $(document).ready(function () {
     // first - click events 
     var searchHistory = JSON.parse(localStorage.getItem("history")) || [];
 
-    for (cityname in searchHistory){
-        $(".search-history").append("<li class = list-group-item searched-city>" + searchHistory[cityname] + "</li>")
+    for (cityName in searchHistory){
+        $(".search-history").append("<li class = list-group-item searched-city>" + searchHistory[cityName] + "</li>")
     }
 
     $(".searchBtn").on("click", function () {
